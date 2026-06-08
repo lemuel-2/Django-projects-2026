@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
+{% block title %}Edit Post - Django Blog{% endblock %}
+
 {% block content %}
-<h1> Edit Post</h1>
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-<input type="submit" value="Update">
-</form>
+<div class="post-form-container">
+    <h1>✏️ Edit Post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-warning">💾 Save Changes</button>
+        <a href="{% url 'post_detail' post.pk %}" class="btn" style="margin-left: 0.5rem; background: linear-gradient(135deg, #7f8c8d 0%, #7f8c8d 100%);">Cancel</a>
+    </form>
+</div>
 {% endblock content %}

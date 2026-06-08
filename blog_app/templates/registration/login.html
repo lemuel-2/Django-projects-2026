@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
+{% block title %}Login - Django Blog{% endblock %}
+
 {% block content %}
-<h2>Log in</h2>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log in</button>
-</form>
+<div class="post-form-container" style="max-width: 500px; margin: 2rem auto;">
+    <h1>🔐 Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success" style="width: 100%;">Sign In</button>
+    </form>
+    <p style="text-align: center; margin-top: 1.5rem; color: #7f8c8d;">
+        Don't have an account? <a href="{% url 'signup' %}" style="font-weight: 600;">Sign up here</a>
+    </p>
+</div>
 {% endblock content %}

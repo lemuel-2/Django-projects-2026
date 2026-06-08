@@ -4,19 +4,20 @@
 
 {% block content %}
 <div class="posts-container">
-    <h1>📚 All Blog Posts</h1>
+    <h1>📚 Blog Posts</h1>
     
     {% if post_list %}
         {% for post in post_list %}
             <article class="post-entry">
                 <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-                <p>{{ post.body|truncatewords:30 }}</p>
-                <a href="{% url 'post_detail' post.pk %}">Read More →</a>
+                <p>{{ post.body|truncatewords:35 }}</p>
+                <a href="{% url 'post_detail' post.pk %}" class="read-more">Continue Reading →</a>
             </article>
         {% endfor %}
     {% else %}
-        <div style="text-align: center; padding: 2rem; background: #f0f0f0; border-radius: 8px;">
-            <p style="font-size: 1.1rem; color: #666;">No blog posts yet. <a href="{% url 'post_new' %}">Create your first post!</a></p>
+        <div class="empty-state">
+            <p>📭 No blog posts yet. Be the first to share your thoughts!</p>
+            <a href="{% url 'post_new' %}">✨ Create Your First Post</a>
         </div>
     {% endif %}
 </div>
