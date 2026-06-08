@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="posts-container">
-    <h1>📚 Blog Posts</h1>
+    <h1>Blog Posts</h1>
     
     {% if post_list %}
         {% for post in post_list %}
@@ -16,8 +16,8 @@
         {% endfor %}
     {% else %}
         <div class="empty-state">
-            <p>📭 No blog posts yet. Be the first to share your thoughts!</p>
-            <a href="{% url 'post_new' %}">✨ Create Your First Post</a>
+            <p>No blog posts yet. Be the first to share your thoughts!</p>
+            <a href="{% url 'post_new' %}">Create Your First Post</a>
         </div>
     {% endif %}
 </div>

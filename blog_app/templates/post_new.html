@@ -4,11 +4,11 @@
 
 {% block content %}
 <div class="post-form-container">
-    <h1>✨ Create New Post</h1>
+    <h1>Create New Post</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-success">📤 Publish Post</button>
+        <button type="submit" class="btn btn-success">Publish Post</button>
         <a href="{% url 'home' %}" class="btn" style="margin-left: 0.5rem; background: linear-gradient(135deg, #7f8c8d 0%, #7f8c8d 100%);">Cancel</a>
     </form>
 </div>

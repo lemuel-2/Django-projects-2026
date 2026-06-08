@@ -32,12 +32,12 @@
             <div>
                 {% if user.is_authenticated %}
                     <div class="welcome-message">
-                        <p>👋 Welcome back!</p>
+                        <p>Welcome back!</p>
                         <strong>{{ user.username }}</strong>
                     </div>
                 {% else %}
                     <div class="welcome-message">
-                        <p>📚 Explore our blog posts</p>
+                        <p>Explore our blog posts</p>
                         <strong><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'signup' %}">sign up</a> to interact with posts</strong>
                     </div>
                 {% endif %}

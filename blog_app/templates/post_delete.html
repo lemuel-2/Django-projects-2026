@@ -4,16 +4,16 @@
 
 {% block content %}
 <div class="post-form-container">
-    <h1>🗑️ Delete Post</h1>
+    <h1>Delete Post</h1>
     <div class="delete-confirmation">
-        <p>⚠️ Are you sure you want to permanently delete this post?</p>
+        <p>Are you sure you want to permanently delete this post?</p>
         <p><strong>"{{ post.title }}"</strong></p>
         <p>This action cannot be undone.</p>
     </div>
     <form action="" method="post" style="margin-top: 2rem;">
         {% csrf_token %}
         <div class="action-buttons">
-            <button type="submit" class="btn btn-danger">🗑️ Yes, Delete Post</button>
+            <button type="submit" class="btn btn-danger">Yes, Delete Post</button>
             <a href="{% url 'post_detail' post.pk %}" class="btn" style="background: linear-gradient(135deg, #7f8c8d 0%, #7f8c8d 100%); flex: 1; min-width: 150px; text-align: center;">← Cancel</a>
         </div>
     </form>

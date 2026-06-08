@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="post-form-container" style="max-width: 500px; margin: 2rem auto;">
-    <h1>✨ Create Account</h1>
+    <h1>Create Account</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
